@@ -1,0 +1,24 @@
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">{{ titulo }}</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of usuarios; index as i" [ngClass]="{'table-success': usuario.alumno, 'table-info': !usuario.alumno}">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td (click)="editarUsuario(usuario)">{{ usuario.username }}</td>
+                    <td (click)="editarUsuario(usuario)">{{ usuario.apellido }}</td>
+                    <td (click)="editarUsuario(usuario)">{{ usuario.nombre }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

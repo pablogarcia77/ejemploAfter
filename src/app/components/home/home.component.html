@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <app-table
+    [usuarios]="usuarios"
+    [titulo]="'Listado de Usuarios'"
+    (enviarUsuario)="agregarLista($event)"
+>
+</app-table>
+
+<hr>
+
+<app-table
+    [titulo]="'Usuarios Aptos'"
+    [usuarios]="seleccionados"
+>
+</app-table>
+</div>
